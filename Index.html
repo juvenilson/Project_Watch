@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="Menu">
-            <button onclick="togglemenu()">Menu</button>
+            <button class="menu-button"onclick="togglemenu()">Menu</button>
             <div class="dropdown" id="dropdownMenu">
                 <a href="#">Arte da Relojoaria</a>
                 <a href="#">Nossa Historia</a>
@@ -20,7 +20,7 @@
         <h1>Hello Word</h1>
         <div class="search-favorites">
             <input type="text" placeholder="Buscar...">
-            <button>S2 Favoritos</button>
+            <button> ❤️Favoritos</button>
         </div>
     </header>
     <script>
@@ -28,6 +28,9 @@
             const menu =document.getElementById("dropdownMenu");
             menu.style.display = menu.style.display === "block" ? "none" : "block";
         }
+        window.onload = function() {
+            document.getElementById("dropdownMenu").style.display="none";
+        };
     </script>
 </body>
 </html>

@@ -59,3 +59,9 @@ menu{
     color: white;
     cursor: pointer;
 }
+/*Ajuste para o botão de favoritas e campo de busca*/
+.search-favorites{
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /*spaçamento entre o titulo e a busca*/
+}
