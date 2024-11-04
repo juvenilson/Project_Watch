@@ -1,0 +1,31 @@
+:root {
+    --cor1:#062d3e;
+    --cor2:#25535b;
+    --cor3:#d6a26f;
+    --cor4:#d07746;
+    --cor5:#dee0e3;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor3);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    background-image: linear-gradient(to botton, --cor1, --cor2);
+}
+
+body > header > div {
+    background-color: var(--cor2);
+    color: #fff;
+    text-align: center;
+    display: block;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.559);
+    text-decoration: none;
+}
+
