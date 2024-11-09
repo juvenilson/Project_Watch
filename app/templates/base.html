@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="style/style.css">
     <style>
         :root {
             --cor1:#062d3e;
@@ -84,6 +83,10 @@
             border-radius: 0 0 3px 3px;
         }
 
+        main {
+            min-height: 500px;
+        }
+
 
     </style>
 </head>
@@ -99,9 +102,6 @@
         </div>
     </header>
     <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate excepturi corrupti mollitia voluptatem accusamus quas sint. Repellat odio, totam veritatis dolore sed ipsam assumenda error quidem blanditiis placeat quos?</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus distinctio, consequuntur eligendi, facere repudiandae placeat minus velit maxime, exercitationem magni inventore doloremque tenetur! Beatae quos earum excepturi quis, necessitatibus deleniti.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur pariatur perferendis consequatur nesciunt iusto fugiat veritatis exercitationem facere dolorem? Ipsa ut excepturi aliquid ipsam saepe reiciendis esse rerum explicabo libero!</p>
         {% block content %}
         
         {% endblock %}

@@ -17,10 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from watches.views import homepage
+from clientaccount.views import user_register
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', homepage)
+    path('', homepage),
+    path('account/', user_register, name='account'),
 ]
