@@ -1,113 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="style/style.css">
-    <style>
-        :root {
-            --cor1:#062d3e;
-            --cor2:#25535b;
-            --cor3:#e4c3a3;
-            --cor4:#d18c67b5;
-            --cor5:#2e8c52;
-        }
 
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-
-        body {
-            background-color: white;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-        }
-
-        header {
-            background-color: var(--cor2);
-            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.364);
-            border-radius: 0 0 2px 2px;
-        }
-
-        header > h1 {
-            color: var(--cor4);
-            text-align: center;
-            font-size: 2em;
-            font-weight: lighter;
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-style: italic;
-        }
-
-        body > header > div {
-            background-color: var(--cor2);
-            padding: 10px;
-            text-align: left;
-            display: flex;
-            box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.559);
-        }
-
-        body > header > div > a {
-            color: white;
-            text-decoration: none;
-            background-color: var(--cor1);
-            margin: 2px;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        
-
-        body > header > div > a:hover {
-            background-color: #062d3e83;
-        }
-
-        body > main {
-            background-color: var(--cor3);
-            max-width: 1000px;
-            min-width: 300px;
-            display: block;
-            margin: auto;
-            padding: 10px;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.482);
-        }
-
-        footer {
-            background-color: var(--cor4);
-            margin: auto;
-            padding: 10px;
-            text-align: center;
-            color: white;
-            border-radius: 0 0 3px 3px;
-        }
-
-
-    </style>
+    <title>inicio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Nome Do Site</h1>
-        <div>
-            <a href="#">Arte da Relojoaria</a>
-            <a href="#">Nosso Estoque</a>
-            <a href="#">Carrinho de compras</a>
-            <a href="#">Nossa Historia</a>
-            <a href="#">Clube de Membros</a>
+        <div class="Menu">
+            <button class="menu-button"onclick="togglemenu()">Menu</button>
+            <div class="dropdown" id="dropdownMenu">
+                <a href="#">Arte da Relojoaria</a>
+                <a href="#">Nossa Historia</a>
+                <a href="#">Nosso Estoque</a>
+                <a href="#">Clube de Membros</a>
+                <a href="#">Carrinho de compras</a>
+            </div>
+        </div>
+        <h1>Hello Word</h1>
+        <div class="search-favorites">
+            <input type="text" placeholder="Buscar...">
+            <button> ❤️Favoritos</button>
+            <button>🛒</button>
         </div>
     </header>
-    <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate excepturi corrupti mollitia voluptatem accusamus quas sint. Repellat odio, totam veritatis dolore sed ipsam assumenda error quidem blanditiis placeat quos?</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus distinctio, consequuntur eligendi, facere repudiandae placeat minus velit maxime, exercitationem magni inventore doloremque tenetur! Beatae quos earum excepturi quis, necessitatibus deleniti.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur pariatur perferendis consequatur nesciunt iusto fugiat veritatis exercitationem facere dolorem? Ipsa ut excepturi aliquid ipsam saepe reiciendis esse rerum explicabo libero!</p>
-        {% block content %}
-        
-        {% endblock %}
-    </main>
-    <footer>
-        <p>All rights reserved</p>
-    </footer>
+    <script>
+        function togglemenu() {
+            const menu =document.getElementById("dropdownMenu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+        window.onload = function() {
+            document.getElementById("dropdownMenu").style.display="none";
+        };
+    </script>
+ 
 </body>
 </html>
